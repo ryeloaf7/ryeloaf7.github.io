@@ -1,11 +1,14 @@
 <!doctype html>
 
 <html>
-  <button onClick="test()"> hi </button>
+  <button onClick="test()"> click me </button>
+  <h1 id="clickclock"> click </h1>
 </html>
 
 <script>
+  var toggle = false;
   function test() {
-    window.alert("click");
+    document.getElementById("clickclock").innerHTML = toggle ? "click" : "clock";
+    toggle =!toggle;
   }
 </script>
